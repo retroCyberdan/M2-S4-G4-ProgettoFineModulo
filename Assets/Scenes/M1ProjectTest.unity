@@ -131,6 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289374402}
+  - component: {fileID: 289374403}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -153,6 +154,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &289374403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289374401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee1f39139440940b7d5a97aa3cfc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a:
+    name: 
+    hp: 0
+    baseStats:
+      atk: 10
+      def: 0
+      res: 0
+      spd: 0
+      crt: 0
+      aim: 0
+      eva: 0
+    resistance: 0
+    weakness: 0
+    weapon:
+      name: 
+      dmgType: 0
+      elem: 0
+      bonusStats:
+        atk: 0
+        def: 0
+        res: 0
+        spd: 0
+        crt: 0
+        aim: 0
+        eva: 0
+  b:
+    name: 
+    hp: 0
+    baseStats:
+      atk: 0
+      def: 0
+      res: 0
+      spd: 0
+      crt: 0
+      aim: 0
+      eva: 0
+    resistance: 0
+    weakness: 0
+    weapon:
+      name: 
+      dmgType: 0
+      elem: 0
+      bonusStats:
+        atk: 0
+        def: 0
+        res: 0
+        spd: 0
+        crt: 0
+        aim: 0
+        eva: 0
 --- !u!1 &1135694587
 GameObject:
   m_ObjectHideFlags: 0
