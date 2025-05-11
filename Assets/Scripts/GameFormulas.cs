@@ -79,8 +79,8 @@ public static class GameFormulas
         }
 
         int baseDamage = attackerStatsSum.atk - defType;
-        float multiplier = EvaluateElementalModifier(attacker.GetWeapon().GetElem(), defender);
-        float finalDamage = baseDamage * multiplier;
+        float damageMultiplier = EvaluateElementalModifier(attacker.GetWeapon().GetElem(), defender);
+        float finalDamage = baseDamage * damageMultiplier;
 
         if (IsCrit(Mathf.RoundToInt(finalDamage)) == true)
         {

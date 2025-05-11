@@ -167,55 +167,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   a:
-    name: 
-    hp: 0
+    name: Cloud
+    hp: 50
     baseStats:
-      atk: 10
-      def: 0
-      res: 0
-      spd: 0
-      crt: 0
-      aim: 0
-      eva: 0
-    resistance: 0
-    weakness: 0
+      atk: 20
+      def: 16
+      res: 25
+      spd: 55
+      crt: 25
+      aim: 100
+      eva: 1
+    resistance: 3
+    weakness: 1
     weapon:
-      name: 
+      name: Buster Sword
       dmgType: 0
-      elem: 0
+      elem: 3
       bonusStats:
-        atk: 0
-        def: 0
-        res: 0
-        spd: 0
-        crt: 0
-        aim: 0
-        eva: 0
+        atk: 80
+        def: 40
+        res: 70
+        spd: 30
+        crt: 90
+        aim: 75
+        eva: 1
   b:
-    name: 
-    hp: 0
+    name: Sephiroth
+    hp: 100
     baseStats:
-      atk: 0
-      def: 0
-      res: 0
-      spd: 0
-      crt: 0
-      aim: 0
-      eva: 0
-    resistance: 0
-    weakness: 0
+      atk: 30
+      def: 18
+      res: 25
+      spd: 56
+      crt: 30
+      aim: 100
+      eva: 1
+    resistance: 2
+    weakness: 1
     weapon:
-      name: 
+      name: Masamune
       dmgType: 0
-      elem: 0
+      elem: 1
       bonusStats:
-        atk: 0
-        def: 0
-        res: 0
-        spd: 0
-        crt: 0
-        aim: 0
-        eva: 0
+        atk: 100
+        def: 60
+        res: 60
+        spd: 50
+        crt: 100
+        aim: 65
+        eva: 10
 --- !u!1 &1135694587
 GameObject:
   m_ObjectHideFlags: 0

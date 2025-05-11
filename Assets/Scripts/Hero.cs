@@ -31,8 +31,8 @@ using UnityEngine;
     public Weapon GetWeapon() => weapon;
 
     //Creo i vari Setter uando l'operatore freccia
-    public void SetName (string name) => this.name = name;
-    public void SetHp (int hp) => this.hp = hp;
+    public void SetName (string name) => this.name = (string.IsNullOrEmpty(name) == true) ? "Inserire il nome dell'eroe" : name;
+    public void SetHp (int hp) => this.hp = (hp <= 0) ? hp = 0 : hp;
     public void SetStats (Stats baseStats) => this.baseStats = baseStats;
     public void SetResistance (ELEMENT resistance) => this.resistance = resistance;
     public void SetWeakness(ELEMENT weakness) => this.weakness = weakness;
@@ -41,7 +41,7 @@ using UnityEngine;
     //Creo la funzione 'AddHp'
     public void AddHp (int amount)
     {
-        SetHp(this.hp + amount);
+        SetHp(hp + amount);
     }
 
     //Creo la funzione 'TakeDamage'

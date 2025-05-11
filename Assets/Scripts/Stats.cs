@@ -30,7 +30,7 @@ using UnityEngine;
     //creo una funzione statica 'Sum' che mi restituisce uno Stats
     public static Stats Sum (Stats a, Stats b)
     {
-        Stats somma;
+        Stats somma = new Stats();
         somma.atk = a.atk + b.atk;
         somma.def = a.def + b.def;
         somma.res = a.res + b.res;
