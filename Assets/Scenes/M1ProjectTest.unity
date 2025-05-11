@@ -122,100 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &289374401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 289374402}
-  - component: {fileID: 289374403}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &289374402
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289374401}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &289374403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289374401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee1f39139440940b7d5a97aa3cfc5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  a:
-    name: Cloud
-    hp: 50
-    baseStats:
-      atk: 20
-      def: 16
-      res: 25
-      spd: 55
-      crt: 25
-      aim: 100
-      eva: 1
-    resistance: 3
-    weakness: 1
-    weapon:
-      name: Buster Sword
-      dmgType: 0
-      elem: 3
-      bonusStats:
-        atk: 80
-        def: 40
-        res: 70
-        spd: 30
-        crt: 90
-        aim: 75
-        eva: 1
-  b:
-    name: Sephiroth
-    hp: 100
-    baseStats:
-      atk: 30
-      def: 18
-      res: 25
-      spd: 56
-      crt: 30
-      aim: 100
-      eva: 1
-    resistance: 2
-    weakness: 1
-    weapon:
-      name: Masamune
-      dmgType: 0
-      elem: 1
-      bonusStats:
-        atk: 100
-        def: 60
-        res: 60
-        spd: 50
-        crt: 100
-        aim: 65
-        eva: 10
 --- !u!1 &1135694587
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +214,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1309396540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309396542}
+  - component: {fileID: 1309396543}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1309396542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309396540}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309396543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309396540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eee1f39139440940b7d5a97aa3cfc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a:
+    name: Cloud
+    hp: 150
+    baseStats:
+      atk: 6
+      def: 3
+      res: 6
+      spd: 7
+      crt: 5
+      aim: 8
+      eva: 4
+    resistance: 3
+    weakness: 0
+    weapon:
+      name: Buster Sword
+      dmgType: 0
+      elem: 0
+      bonusStats:
+        atk: 6
+        def: 4
+        res: 7
+        spd: 3
+        crt: 7
+        aim: 8
+        eva: 3
+  b:
+    name: Sephiroth
+    hp: 400
+    baseStats:
+      atk: 8
+      def: 4
+      res: 4
+      spd: 6
+      crt: 4
+      aim: 6
+      eva: 3
+    resistance: 1
+    weakness: 0
+    weapon:
+      name: Masamune
+      dmgType: 1
+      elem: 3
+      bonusStats:
+        atk: 7
+        def: 6
+        res: 5
+        spd: 6
+        crt: 4
+        aim: 4
+        eva: 8
 --- !u!1 &1369274511
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,4 +432,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1135694590}
   - {fileID: 1369274513}
-  - {fileID: 289374402}
+  - {fileID: 1309396542}

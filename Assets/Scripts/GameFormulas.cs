@@ -26,11 +26,11 @@ public static class GameFormulas
 
     public static float EvaluateElementalModifier(ELEMENT attackElement, Hero defender)
     {
-        if (HasElementAdvantge(attackElement, defender) == true)
+        if (HasElementAdvantge(attackElement, defender))
         {
             return 1.5f;
         }
-        else if (HasElementDisadvantage(attackElement, defender) == true)
+        else if (HasElementDisadvantage(attackElement, defender))
         {
             return 0.5f;
         }
@@ -67,33 +67,34 @@ public static class GameFormulas
     {
         Stats attackerStatsSum = Stats.Sum(attacker.GetStats(), attacker.GetWeapon().GetStats());
         Stats defenderStatsSum = Stats.Sum(defender.GetStats(), defender.GetWeapon().GetStats());
-        int defType;
+       
+        int defType = 0;
 
         if (attacker.GetWeapon().GetDmgType() == Weapon.DAMAGE_TYPE.PHYSICAL)
         {
             defType = defender.GetStats().def;
         }
-        else
+        else if (attacker.GetWeapon().GetDmgType() == Weapon.DAMAGE_TYPE.MAGICAL)
         {
             defType = defender.GetStats().res;
         }
 
-        int baseDamage = attackerStatsSum.atk - defType;
+        int damage = attackerStatsSum.atk - defType;
         float damageMultiplier = EvaluateElementalModifier(attacker.GetWeapon().GetElem(), defender);
-        float finalDamage = baseDamage * damageMultiplier;
+        damage = Mathf.RoundToInt(damage * damageMultiplier);
 
-        if (IsCrit(Mathf.RoundToInt(finalDamage)) == true)
+        if (IsCrit(damage) == true)
         {
-            finalDamage *= 2;
+            damage *= 2;
         }
 
-        if (finalDamage < 0)
+        if (damage < 0)
         {
             return 0;
         }
         else
         {
-            return Mathf.RoundToInt(finalDamage);
+            return damage;
         }
     }
 }
