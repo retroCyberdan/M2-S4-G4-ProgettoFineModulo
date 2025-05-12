@@ -33,7 +33,7 @@ using UnityEngine;
     public Stats GetStats() => bonusStats;
 
     //Creo i vari Setter usando l'operatore freccia;
-    public void SetName(string name) => this.name = (string.IsNullOrEmpty(name) == true) ? "Inserire il nome dell'arma" : name;
+    public void SetName(string name) => this.name = (string.IsNullOrEmpty(name)) ? "Inserire il nome dell'arma" : name;
     public void SetDmgType(DAMAGE_TYPE dmgType) => this.dmgType = dmgType;
     public void SetElement(ELEMENT elem) => this.elem = elem;
     public void SetStats(Stats bonusStats) => this.bonusStats = bonusStats;

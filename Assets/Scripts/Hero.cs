@@ -33,7 +33,7 @@ using UnityEngine;
 
     //Creo i vari Setter uando l'operatore freccia
     public void SetName(string name) => this.name = (string.IsNullOrEmpty(name) == true) ? "Inserire il nome dell'eroe" : name;
-    public void SetHp(int hp) => this.hp = (hp <= 0) ? hp = 0 : hp;
+    public void SetHp(int hp) => this.hp = Mathf.Max(0, hp);
     public void SetStats(Stats baseStats) => this.baseStats = baseStats;
     public void SetResistance(ELEMENT resistance) => this.resistance = resistance;
     public void SetWeakness(ELEMENT weakness) => this.weakness = weakness;
