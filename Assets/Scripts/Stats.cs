@@ -15,8 +15,8 @@ using UnityEngine;
     public int aim;
     public int eva;
 
-    //creo un Costruttore che assegni tutti i valori
-    public Stats (int atk, int def, int res, int spd, int crt, int aim, int eva)
+    //Creo un costruttore 'Stats' che assegna tutti i valori tra parentesi
+    public Stats(int atk, int def, int res, int spd, int crt, int aim, int eva)
     {
         this.atk = atk;
         this.def = def;
@@ -27,8 +27,8 @@ using UnityEngine;
         this.eva = eva;
     }
 
-    //creo una funzione statica 'Sum' che mi restituisce uno Stats
-    public static Stats Sum (Stats a, Stats b)
+    //Creo una funzione statica 'Sum' che restituisce uno Stats
+    public static Stats Sum(Stats a, Stats b)
     {
         Stats somma = new Stats();
         somma.atk = a.atk + b.atk;

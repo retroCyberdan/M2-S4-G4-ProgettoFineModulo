@@ -6,7 +6,8 @@ using UnityEngine;
 
 public static class GameFormulas
 {
-    public static bool HasElementAdvantge (ELEMENT attackElement, Hero defender)
+    //Creo la funzione 'HasElementAdvantge' per valutare se chi subisce è debole all'elemento dell'arma di chi attacca
+    public static bool HasElementAdvantge(ELEMENT attackElement, Hero defender)
     {
         if (attackElement == defender.GetWeakness())
         {
@@ -15,7 +16,9 @@ public static class GameFormulas
         return false;
     }
 
-    public static bool HasElementDisadvantage (ELEMENT attackElement, Hero defender)
+
+    //Creo la funzione 'HasElementDisadvantage' per valutare se chi subisce è resistente all'elemento dell'arma di chi attacca
+    public static bool HasElementDisadvantage(ELEMENT attackElement, Hero defender)
     {
         if (attackElement == defender.GetResistance())
         {
@@ -24,6 +27,8 @@ public static class GameFormulas
         return false;
     }
 
+
+    //Creo la funzione 'EvaluateElementalModifier' per aumentare o ridurre il danno in base alle debolezze o resistenze di chi subisce
     public static float EvaluateElementalModifier(ELEMENT attackElement, Hero defender)
     {
         if (HasElementAdvantge(attackElement, defender))
@@ -40,7 +45,8 @@ public static class GameFormulas
         }
     }
 
-    public static bool HasHit (Stats attacker, Stats defender)
+    //Creo la funzione 'HasHit' per valutare se il colpo è andato a segno
+    public static bool HasHit(Stats attacker, Stats defender)
     {
         int hitChance = attacker.aim - defender.eva;
         int randomNumber = Random.Range(0, 100);
@@ -52,7 +58,8 @@ public static class GameFormulas
         return true;
     }
 
-    public static bool IsCrit (int critValue)
+    //Creo la funzione 'IsCrit' per valutare se è un colpo critico
+    public static bool IsCrit(int critValue)
     {
         int randomNumber = Random.Range(0, 100);
         if (randomNumber < critValue)
@@ -63,6 +70,7 @@ public static class GameFormulas
         return false;
     }
 
+    //Creo la funzione 'CalculateDamage' per il calcolo dei danni
     public static int CalculateDamage(Hero attacker, Hero defender)
     {
         Stats attackerStatsSum = Stats.Sum(attacker.GetStats(), attacker.GetWeapon().GetStats());
@@ -83,7 +91,7 @@ public static class GameFormulas
         float damageMultiplier = EvaluateElementalModifier(attacker.GetWeapon().GetElem(), defender);
         damage = Mathf.RoundToInt(damage * damageMultiplier);
 
-        if (IsCrit(damage) == true)
+        if (IsCrit(damage))
         {
             damage *= 2;
         }

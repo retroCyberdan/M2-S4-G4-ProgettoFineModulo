@@ -17,8 +17,8 @@ using UnityEngine;
     [SerializeField] private ELEMENT elem;
     [SerializeField] private Stats bonusStats;
 
-    //Creo un Costruttore 'Weapon' che assegna tutti i valori
-    public Weapon (string name, DAMAGE_TYPE dmgType, ELEMENT elem, Stats bonusStats)
+    //Creo un costruttore 'Weapon' che assegna tutti i valori tra parentesi
+    public Weapon(string name, DAMAGE_TYPE dmgType, ELEMENT elem, Stats bonusStats)
     {
         this.name = name;
         this.dmgType = dmgType;
@@ -34,7 +34,7 @@ using UnityEngine;
 
     //Creo i vari Setter usando l'operatore freccia;
     public void SetName(string name) => this.name = (string.IsNullOrEmpty(name) == true) ? "Inserire il nome dell'arma" : name;
-    public void SetDmgType (DAMAGE_TYPE dmgType) => this.dmgType = dmgType;
-    public void SetElement (ELEMENT elem) => this.elem = elem;
-    public void SetStats (Stats bonusStats) => this.bonusStats = bonusStats;
+    public void SetDmgType(DAMAGE_TYPE dmgType) => this.dmgType = dmgType;
+    public void SetElement(ELEMENT elem) => this.elem = elem;
+    public void SetStats(Stats bonusStats) => this.bonusStats = bonusStats;
 }
